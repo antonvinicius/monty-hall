@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import styles from "../styles/Jogo.module.css";
 
-export default function jogo() {
+export default function Jogo() {
   const [portas, setPortas] = useState([]);
 
   const attPortas = (novaPorta: PortaModel) => {
@@ -29,7 +29,7 @@ export default function jogo() {
       <div id={styles.jogo}>
         <div className={styles.portas}>{renderizarPortas()}</div>
         <div className={styles.botoes}>
-          <Link href="/">
+          <Link href="/" passHref>
             <button>REINICIAR JOGO</button>
           </Link>
         </div>
